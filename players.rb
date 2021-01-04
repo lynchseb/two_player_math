@@ -7,17 +7,28 @@ class Player
     @lives = 3
   end
 
-  # def is_turn?
-  #   @isTurn
-  # end
-
-  # def set_turn
-  #   if @isTurn ? @isTurn = false : @isTurn = true 
-  #   end
-  # end
-
   def check_life
     return @lives > 0
+  end
+
+  def check_player1(player1_name)
+    if !@player1_name.empty?
+    puts "Thank you player1 is #{@player1_name}, please write the name of the second player."
+    else
+    puts "You must enter a player name"
+    @player1_name = gets.chomp
+    check_player1(player1_name)
+    end
+  end
+  
+  def check_player2(player2_name)
+    if !@player2_name.empty?
+    puts "Thank you player2 is #{@player2_name}"
+    else
+    puts "You must enter a player name"
+    @player2_name = gets.chomp
+    check_player2(player2_name)
+    end
   end
   
   def remove_player_life
