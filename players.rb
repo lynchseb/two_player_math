@@ -1,20 +1,20 @@
 class Player
-  attr_accessor :name, :isTurn, :lives
+  attr_accessor :name, :lives
 
   def initialize(name)
     @name = name
-    @isTurn = false
+    # @isTurn = false
     @lives = 3
   end
 
-  def is_turn?
-    @isTurn
-  end
+  # def is_turn?
+  #   @isTurn
+  # end
 
-  def set_turn
-    if @isTurn ? @isTurn = false : @isTurn = true 
-    end
-  end
+  # def set_turn
+  #   if @isTurn ? @isTurn = false : @isTurn = true 
+  #   end
+  # end
 
   def check_life
     return @lives > 0
